@@ -366,6 +366,7 @@ document.querySelector("#container").append(box)
 })
 function addtocard(elem){
    carddata.push(elem)
+
    localStorage.setItem("card",JSON.stringify(carddata)) 
    alert("item added to card")
 }
