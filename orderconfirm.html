@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+    <style>
+      #topline {
+        border-top: 2px solid rgb(247, 148, 29);
+        margin-bottom: 30px;
+      }
+      #navbar {
+        display: flex;
+        justify-content: space-between;
+        font-family: sans-serif;
+        color: rgb(69, 90, 100);
+        padding: 20px;
+      }
+      #navbar img {
+        height: 50px;
+      }
+      #navlinks {
+        display: flex;
+        font-size: 11px;
+        margin-right: 20px;
+        padding: 10px;
+      }
+      #navlogin {
+        font-size: 12px;
+      }
+      a {
+        cursor: pointer;
+      }
+      #navbar a {
+        color: rgb(69, 90, 100);
+      }
+      #navright {
+        display: flex;
+        text-align: center;
+      }
+      #orderstatus {
+        color: #27be7b;
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      #leftbox {
+        width: 70%;
+        margin-right: 10px;
+      }
+      #rightbox {
+        width: 20%;
+        margin-left: 10px;
+      }
+      #container {
+        width: 80%;
+
+        margin: auto;
+        font-family: sans-serif;
+        color: rgb(69, 90, 100);
+      }
+      #leftTop {
+        display: flex;
+        justify-content: space-between;
+      }
+      #ordertime {
+        display: flex;
+        width: 70%;
+        border: 1px solid grey;
+        padding: 2px;
+      }
+      .orange {
+        color: rgb(247, 148, 29);
+      }
+      #trackorder {
+        color: white;
+        background-color: rgb(247, 148, 29);
+        padding: 2px;
+      }
+      table {
+        width: 100%;
+        text-align: justify;
+      }
+      #middle {
+        display: flex;
+      }
+      #addressDisplay > div {
+        margin: 5px;
+      }
+      #addressDisplay {
+        border: 0.15px solid grey;
+      }
+      #addressHeading {
+        text-align: center;
+        border: 0.25px solid grey;
+        padding: 5px;
+      }
+      #feedback {
+        width: 70%;
+      }
+      #feedbackbottom {
+        display: flex;
+      }
+      #submitreview{
+          background-color:rgb(247, 148, 29) ;
+          color: white;
+          padding: 5px;
+          text-align: center;
+          border: 0px;
+          width: 100%;
+      }
+      label{
+          font-weight: bold;
+          font-size: 12px;
+      }
+      #reviewtext {
+          width: 100%;
+      }
+      radio {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
+}
+
+radio input[type='radio'] {
+  display: none;
+}
+
+radio label {
+  color: #666;
+  font-weight: normal;
+}
+
+radio label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid rgb(247, 148, 29);
+  background-color: transparent;
+}
+
+radio input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: rgb(247, 148, 29);
+}
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <!-- nav bar -->
+      <div>
+        <img
+          src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/baselogo.png"
+          alt=""
+        />
+      </div>
+
+      <div id="navright">
+        <div id="navlinks">
+          <p><a href=""> Sellers Corner </a></p>
+          <p>|</p>
+          <p><a href=""> Feedback </a></p>
+          <p>|</p>
+          <p><a href=""> Delivery Info </a></p>
+        </div>
+
+        <div id="navlogin">
+          <div style="display: flex">
+            <p><a href=""> LOGIN </a></p>
+            <p>/</p>
+            <p><a href=""> SIGNUP </a></p>
+          </div>
+          <div style="font-weight: bolder; font-size: 13px">WELCOME GUEST</div>
+        </div>
+      </div>
+    </div>
+    <hr id="topline" />
+
+    <div id="container">
+      <div id="orderstatus">✔️ Your order has been placed successfully</div>
+      <div id="middle">
+        <div id="leftbox">
+          <div id="leftTop">
+            <div id="ordertime">
+              <div class="orange">Order Date :</div>
+              <div>April 1, 2022,11:30</div>
+            </div>
+            <div id="trackorder">TRACK YOUR ORDER</div>
+          </div>
+          <br /><br />
+          <div id="deliverytable">
+            <table>
+              <tr>
+                <th>Order ID</th>
+                <th>Qty</th>
+                <th>Product Details</th>
+                <th>Delivery Date</th>
+                <th>Your Price</th>
+                <th>SubTotal</th>
+              </tr>
+              <tr>
+                <td>001</td>
+                <td>1</td>
+                <td>Product Details</td>
+                <td>13 April, 2022</td>
+                <td>Rs 19999</td>
+                <td>Rs 19999</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="font-weight: bolder">Total due at Delivery</td>
+                <td class="orange">Rs 19999</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="rightbox">
+          <div id="addressHeading">SHIPPING ADDRESS</div>
+          <div id="addressDisplay">
+            <div>Address1</div>
+            <div>Address2</div>
+            <div>City</div>
+            <div>State, PINCODE</div>
+            <br />
+            <div>9876543210</div>
+            <div class="orange">Continue Shipping</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="feedback">
+        <h3 style="text-align: center" class="orange"
+        >Thanks for choosing MeanBuy.com</h3>
+        <h4 style="text-align: center">
+          Please provide us with some feedback. We'd like to know how we did.
+        </h4>
+        <div id="feedbackbottom">
+          <div>
+            <p>
+              <span class="orange">1. </span>How easy was it to find what you
+              wanted?
+            </p>
+            <label class="feedbackpoints"
+              ><input type="radio" name="find" value="5" /><span></span>
+              Extremely easy</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="find" value="4" /><span></span> Very
+              Easy</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="find" value="3" /><span></span>
+              Easy</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="find" value="2" /><span></span>
+              Slightly difficult</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="find" value="1" /><span></span>
+              Difficult</label
+            >
+            <br />
+            <p>
+              <span class="orange">2. </span>How would you rate the variety of
+              products available?
+            </p>
+            <label class="feedbackpoints"
+              ><input type="radio" name="variety" value="5" /><span></span>
+              Excellent</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="variety" value="4" /><span></span>
+              Good</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="variety" value="3" /><span></span>
+              Fair</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="variety" value="2" /><span></span>
+              Weak</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="variety" value="1" /><span></span>
+              Poor</label
+            >
+            <br />
+            <p>
+              <span class="orange">3. </span>How's your overall shopping
+              experience at MeanBuy?
+            </p>
+            <label class="feedbackpoints"
+              ><input type="radio" name="overall" value="5" /><span></span>
+              Excellent</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="overall" value="4" /><span></span>
+              Good</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="overall" value="3" /><span></span>
+              Fair</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="overall" value="2" /><span></span>
+              Weak</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="overall" value="1" /><span></span>
+              Poor</label
+            >
+            <br />
+            <p>
+              <span class="orange">4. </span>How likely would you recommend us
+              to others?
+            </p>
+            <label class="feedbackpoints"
+              ><input type="radio" name="recommend" value="5" /><span></span>
+              Very likely</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="recommend" value="4" /><span></span>
+              Likely</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="recommend" value="3" /><span></span>
+              Maybe</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="recommend" value="2" /><span></span>
+              Somewhat unlikely</label
+            >
+            <label class="feedbackpoints"
+              ><input type="radio" name="recommend" value="1" /><span></span>
+              Very unlikely</label
+            >
+          </div>
+
+          <div style="margin-left: 20px;">
+     
+            <p>
+              <span class="orange">5. </span>Any further comments and or
+              suggestions?
+            </p>
+            <textarea id="reviewtext" placeholder="Write here..."></textarea>
+            <div>
+                <button id="submitreview" >SUBMIT</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
