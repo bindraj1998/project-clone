@@ -9,7 +9,7 @@ function loginpro(){
     {
         if(ud[a].maile==lmail && ud[a].passe==lpass)
         {
-            alert("successful");
+            window.location.href="home.html";
             stat=true;
             break;
         }
@@ -18,4 +18,20 @@ function loginpro(){
     {
         alert("Wrong Credential!");
     }
+}
+document.querySelector(".mb").addEventListener("click",gotohome);
+function gotohome(){
+    window.location.href="home.html";
+}
+document.querySelector(".bm").addEventListener("click",gotohome);
+function gotohome(){
+    window.location.href="home.html";
+}
+document.querySelector(".ct").addEventListener("click",gotocart);
+function gotocart(){
+    window.location.href="carddetails.html";
+}
+document.querySelector(".tc").addEventListener("click",gotocart);
+function gotocart(){
+    window.location.href="carddetails.html";
 }
