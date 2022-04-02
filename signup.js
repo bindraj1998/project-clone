@@ -19,3 +19,19 @@ function indata(){
         alert("Password is not Matching!")
     }
 }
+document.querySelector(".mb").addEventListener("click",gotohome);
+function gotohome(){
+    window.location.href="home.html";
+}
+document.querySelector(".bm").addEventListener("click",gotohome);
+function gotohome(){
+    window.location.href="home.html";
+}
+document.querySelector(".ct").addEventListener("click",gotocart);
+function gotocart(){
+    window.location.href="carddetails.html";
+}
+document.querySelector(".tc").addEventListener("click",gotocart);
+function gotocart(){
+    window.location.href="carddetails.html";
+}
