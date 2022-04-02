@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <script src="https://kit.fontawesome.com/db0d6fd17a.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+       
+         #top{
+             display: flex;
+             justify-content: space-around;
+         }
+        #sitelogo>img{
+            height: 68px; width: 200px;
+            padding: 12px 0px 0px 12px;
+        }
+        #sitelogo{
+            width: 60%;
+        }
+        #border{
+            width: 100%;
+            border: 0.5px solid #F7941D;
+            margin-top: 10px;
+        }
+        #contshop{
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 3px 4px;
+        }
+        #contshop>i{
+            color: #F7941D;
+        }
+        .sectop{
+             display: flex;
+
+        }
+        .fbimg{
+            height: 20px; width: 20px;
+            margin-bottom: -5px;
+        }
+        #fbdiv{
+            display: flex;
+        }
+        #fbdiv>div{
+            margin-left: 10px;
+            padding: 2px;
+        }
+        #gbtn{
+            padding: 0 40px 0 45px;
+            background-color: #5183d3;
+            color: white;
+            border: none;
+        }
+        #gblu{
+            background-color: #5183d3;
+        }
+        #fbblu{
+            background-color: #4267B2;
+        }
+        #face{
+            background-color: #4267B2;
+            color: white;
+            border: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        form{
+            margin-top: 60px;
+        }
+        #sectop{
+            border: 0.1px solid rgb(171, 164, 164);
+            width: 98%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            padding-bottom: 50px;
+        }
+        #formsec{
+            width: 65%;
+            margin-left: 10px;
+        }
+        .inp{
+            width: 90%;
+            font-size: large;
+            padding: 7px 0px 7px 10px;
+            margin-bottom: 20px;
+            border: 1px solid lightgray;
+
+        }
+        #fsub{
+            background-color: #F7941D;
+            color: white;
+            width: 91%;
+            border: none;
+        }
+        .txtcen{
+            text-align: center;
+        }
+        #cartbox{
+            width: 32%;
+            margin: auto;
+        }
+        #cartdetail{
+            border: 1px solid gray;
+        }
+        #crln1{
+            width: 100%; 
+            background-color: black;
+            height: 0.1px;
+        }
+        #crln2{
+            width: 90%;
+            background-color: gray;
+            height: 0.5px;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        #mtop{
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #edcr{
+            width: 100%;
+            color: #F7941D;
+            border: 1px solid #F7941D;
+            text-align: center;
+            padding: 5px 0 5px 0;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        #seclogo{
+            height: 100px; width: 100px;
+        }
+        #iilogo{
+            margin: auto;
+            height: 100px; width: 100px;
+            margin-top: 30px;
+
+        }
+        #lnhg{
+            line-height: 0px;
+        }
+        #small{
+            width: 15%;
+            background-color: #F7941D;
+            height: 3px;
+            margin: auto;
+        }
+        #payment{
+            height: 40px; width: 280px;
+            margin-top: 30px;
+        }
+        #bottom{
+            justify-content: space-between;
+            background-color: #f2f2f2;
+        }
+        .sp{
+            line-height: 5px;
+            font-size: small;
+            color: #666666;
+        }
+        .orange{
+            color: #F7941D;
+        }
+        .gray{
+            color: #666666;
+        }
+        .pt{
+            cursor: pointer;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="top">
+            <div id="sitelogo">
+                <img src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/baselogo.png" class="pt mb">
+            </div>
+         <div>
+         <p style="line-height: 20px; font-size: small;" class="gray pt">
+            <a>Seller's Corner</a>
+             | 
+            <a>Feedback</a>
+             | 
+            <a>Delivery Info</a>
+         </p>    
+        </div>
+        <div>
+            <div style="margin-top: 10px;" class="gray pt"><i class="fa-solid fa-lock"></i><span>  <a href="login.html" class="gray pt">LOGIN / </a><a href="signup.html" class="gray pt">SIGNUP</a></span></div>
+            <div style="margin-top: 10px;"> <b>WELCOME GUEST</b></div>
+        </div>
+        <div>
+           <p style="margin-top: 20px;" class="pt ct"><i class="fa-solid fa-cart-shopping orange pt"></i><span style="font-size: smaller;">3</span></p>
+        </div>
+    </div>
+    <div style="margin-top: 10px;">
+        <a>LOGIN /</a><a>  SIGNUP | </a><button id="contshop" class="pt bm">Continue Shopping<i class="fa-solid fa-caret-right"></i></button>
+    </div>
+    <div id="border"></div>
+    <!-- user detail section -->
+    <div class="sectop">
+        <div id="formsec">
+            <h4 class="orange">Login or Create Account</h4>
+            <div id="fbdiv">
+               <div id="fbblu" class="pt"><img class="fbimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKTgya8pkgjX6fwv0YYAM7Z9_XkmEKL8gzw&usqp=CAU" alt=""> <button class="fbbtn pt" id="face">Login with Facebook</button> </div>
+               <div id="gblu" class="pt"><img class="fbimg" src="data:image/jpeg;base64,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" alt=""><button class="fbbtn pt" id="gbtn">Sign in</button></div>
+            </div>
+            <div>
+                <form>
+                    <label>Email Address</label><br>
+                    <input type="mail" placeholder="Email Address" class="inp" id="mailed"><br>
+                    <label>Password</label><br>
+                    <input type="password" placeholder="Password" class="inp" id="pswd"><br>
+                    <label>Confirm Password</label><br>
+                    <input type="password" placeholder="Confirm Password" class="inp" id="cpswd"><br>
+                    <input type="submit" class="inp pt" id="fsub">
+                </form>
+                <p class="txtcen"><a href="login.html" class="gray pt">Already have a Meanbuy Account? Login!</a></p>
+                <p class="txtcen">By signing up, you agree to our <span style="color: #4267B2;" class="pt">Terms of Use & Privacy Policy</span></p>
+            </div>
+        </div>
+        <!--Cart Details -->
+        <div id="cartbox">
+            <div id="cartdetail">
+                <div><h4 class="txtcen gray">Cart Details</h4></div>
+                <div id="crln1"></div>
+                <div id="mtop">
+                    <b class="gray">Total Items : <span></span></b><br>
+                    <b class="gray">Sub Total : <i class="fa-solid fa-indian-rupee-sign"></i><span></span></b>
+                    <div id="crln2"></div>
+                    <b class="gray">Cart Total :<i class="fa-solid fa-indian-rupee-sign"></i><span></span></b>
+                    <div id="edcr" class="pt tc">EDIT CART</div>
+                </div>
+            </div>
+            <!-- image below cart detail -->
+            <div>
+                <div id="iilogo">
+                    <img src="https://www.meanbuy.com/assets/img/india/logo/logo_main.png" alt="" id="seclogo">
+                </div>
+                <div class="txtcen">
+                    <h4 class="gray">Our Shop. Your Price.</h4>
+                    <h5 id="lnhg" class="gray">Feel the power to buy at your price</h5>
+                </div>
+                <div id="small"></div>
+            </div>
+        </div>
+    </div>
+    <!-- bottom section -->
+    <div id="bottom" class="sectop">
+        <div>
+        <h4 class="orange">OUR POLICIES</h4>
+         <p class="sp pt">Covid 19 Precautions</p>
+         <p class="sp pt">Our Promise</p>
+         <p class="sp pt">Terms and Conditions</p>
+         <p class="sp pt">Privacy Policy</p>
+        </div>
+        <div>
+            <h4 class="orange">CORPORATE</h4>
+            <p class="sp pt">Sell with us</p>
+            <p class="sp pt">Career Opportunities</p>
+            <p class="sp pt">Sitemap</p>
+        </div>
+        <div>
+            <h4 class="orange">HELP</h4>
+            <p class="sp pt">How Meanbuy works</p>
+            <p class="sp pt">My Orders</p>
+            <p class="sp pt">Exchanges, Return & Refund</p>
+            <p class="sp pt">Contact us</p>
+            <p class="sp pt">FAQ</p>
+        </div>
+        <div>
+            <h4 class="orange">SELL WITH US</h4>
+            <p class="sp pt">General Informations</p>
+            <p class="sp pt">Sign up</p>
+        </div>
+        <div id="payment">
+            <img src="file:///Users/subhammanavshree/Desktop/Screenshot%202022-04-01%20at%206.42.01%20PM.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
+<script src="signup.js"></script>
