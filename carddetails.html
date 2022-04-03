@@ -5,8 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+                #home{
+        display: flex;
+    justify-content: space-between;      
+    }
+    #last{display: flex;
+     
+     gap:40px;
+     margin: 30px;        
+    }
+    #navbar{display: flex;
+            justify-content: left;
+            
+            height:40px;
+            margin: 20px; 
+            gap:30px;
+        } 
+        #navbar a{font-size: 25px;}
+        #container{
+            display:grid ;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            width:70%;
+            margin: auto;
+            margin-top: 60px;
+        }
+        .inner{display: flex;
+        justify-content: space-between;
+        border-bottom:1px solid #eceff1 ;
+        }
+    
+        #shope{margin-top: -20px;color:#c6aa00 ;font-size:15px ;}
+        #button{height: 25px;margin-top: 20px;
+            color: white;
+            width:80px ;
+            border-radius: 5px;
+            
+            background-color:#3cc101 ;}
+            p{font-size: 20px;}
+            h4{color:#935a64}
+            #carddiv{display: flex;
+            justify-content: space-between;}
+    </style>
 </head>
 <body>
-    <P>enter card detailse</P>
+    <h3>card page</h3>
+    <div id="home">
+        <div>
+            <div>
+              <img src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/baselogo.png" class="mb"/>  
+              <input placeholder="search"/>  
+            </div>
+            
+        </div>
+        <div>
+           <div id="last"><div>
+        
+           
+            <a href="feedback.html"> Feeedback </a>
+            
+             <a href="Delivery.html">Delivery Info</a>
+           </div>
+            </div>
+            
+               <div><a href="login.html">LOGIN</a>
+                <a href="signup.html">SIGN UP</a>
+            </div>
+           
+           </div>
+           <p>WELCOME GEUST</p> 
+        </div>
+    </div>
+    
+    <div id="navbar">
+        <div><a href="Categories.html">Categories</a></div>
+        <div><a href="BestDeals.html">Best Deals</a></div>
+        
+        <div><a href="Trending.html">Trending</a></div>
+        <div><a href="newarrivals.html">New Arrivals</a></div>
+        
+        </div>
+ <h2></h2>
+ <div id="con"></div>
+ <div id="container"></div>
+ 
 </body>
 </html>
+<script src="cartdetail.js"></script>

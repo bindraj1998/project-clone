@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <style>
+
+      
+body{
+  background-color: white;
+}
+
+#maindivvv {
+  background-color: white;
+  display: flex;
+  padding: 5px;
+}
+#AccesoriesContainer {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 10%;
+  gap: 30px;
+}
+#singlediv {
+  width: 100%;
+  background-color: white;
+  /* height: 100%; */
+  /* border: 1px solid red; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+}
+#brandRate {
+  display: flex;
+  justify-content: space-between;
+  font-family:  sans-serif ;
+  color: grey;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  /* border: 1px solid red; */
+}
+#price {
+  margin-bottom: -15px;
+  margin-top: 0px;
+  /* position: absolute; */
+}
+#img {
+  width: 100%;
+  height: 65%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#subdiv {
+  padding: 10px;
+}
+#subcategory {
+  width: 20%;
+  /* height:1800px; */
+  background-color: white;
+  text-align: left;
+  font-family: sans-serif ;
+}
+#rate{
+  border: 1px solid #3cc101;
+  padding: 5px 5px 0px 10px;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #3cc101;
+  color: white;
+  border-radius: 6px;
+ position: absolute;
+ margin-left: 17%;
+ 
+ 
+}
+#ship {
+  color: #3cc101;
+  font-family: sans-serif ;;
+  font-size: 20px;
+  
+}
+h1 {
+  color: grey;
+}
+#subcategory > p > a{
+  font-size: 16px;
+  font-weight: bolder;
+  color: rgb(126, 129, 126);
+  text-decoration: none ;
+  margin-top: 15px;
+}
+#subcategory > p > a:hover{
+  color: rgb(95, 93, 93);
+  text-decoration: underline;
+}
+#subcategory > h2{
+  /* font-size: 16px; */
+  font-weight: bolder;
+  color: rgb(85, 87, 85);
+  text-decoration: none ;
+}
+#brand{
+  width: 200px;
+  margin-bottom: 10px;
+  /* border: 1px solid green; */
+}
+#sortbyprice{
+ 
+  padding: 10px;
+  font-weight: bolder;
+  border: 0px;
+  border-radius: 6px;
+  width: 10%;
+  margin-bottom: 6px;
+}
+#subdives{
+  display: flex;
+  justify-content: space-evenly;
+}
+#bar-img{
+    height: 150px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+@media only screen and (min-width:0px) and (max-width:480px){
+  #AccesoriesContainer{
+      grid-template-columns: repeat(1,1fr);
+      width: 100%;
+      
+  }
+  #subcategory {
+    /* width: 20%;
+    /* height:1800px; */
+    /* background-color: white;
+    text-align: center; */ 
+    display: none;
+  }
+  #rate{
+    position: relative;
+  }
+}
+@media only screen and (min-width:481px) and (max-width:800px){
+  #AccesoriesContainer{
+      grid-template-columns: repeat(2,1fr);
+      width: 100%;
+      /* grid-template-rows: repeat(4,200px);   */
+  }
+  #subcategory {
+    /* width: 20%;
+    /* height:1800px; */
+    /* background-color: white;
+    text-align: center; */ 
+    display: none;
+  }
+  #rate{
+    position: relative;
+  }
+  #ship {
+    
+    font-size: 16px;
+}
+  
+
+}
+    </style>
+</head>
+<body>
+  <div id="bar">
+    <img id="bar-img" src="https://lh3.googleusercontent.com/sClMkW4V-Ig2pGcu9trnq1IshoQSPvTEmK01vAe7CkZWxKTtcD7AJHkMy3EVEpmTwUD0FPJiSpLMIZ6RBUvlrOkkk1ushZwef-qEQ6LvKxJOgjj1UQqSUjedk2fP5fhw_xGlsb5Gwf7U2_2r1YDiWIUM28bKWcEQomRwq6-GLut6r8_cpLMvLs4JCz2EdgbFiSFJRKmoeJejClNN5QduGaqhgScEBeFoeqwTEbjMAloZaOZsOQoPo_pARip6Y9hj5ocBQFNCE_NAe-oDUtDa3CtTjw9kuZCS3ZrahVkhQt0PeUWlvUnFzk7c6FpEwgUAIUQg_stnLGFAqlc71aKHSPaUkakK4LuXz0rnKHRx1JuqYvavwh5hEbmkAJXqMQfBLhKHeA3R-gHw1K1xTokYGnVdH5dS5sO3Hc2quhtZ40bVOLjzkg5FKrTonuPilbHA-AwvksDQb5RyQrKBInvWFDutVr0xJLx6r2p6dpuJ2ETukzfWabd9pTtOUauIE7hWT_ejhdhZfV_77LAuAV4jQEy0HXGpVcxnAADpAi7lwpMd4tOrYTGSkhT7Rjtp2Nd6QMIGyssCfBBbSxrnubWp5qMUW8FPGqQveb7z_bYdB22Z3aG_hT7mZBYCP3W-bbxBK0yqbaoRdYohXlxpeZqqeI_m_ZjwJl9zh3A1Ts2e_2x-jZRr2IlDXgtw8yORnMu96qefCqHd4cvCbDHO771Uw3NHBWqPjLotlh66hzFBCINY1g8T6rLv9e39EYa24EAEtY3ID6MRyKUVb57INv5kWWwcoU5pVf0V=w1896-h171-no?authuser=0" alt="">
+</div>
+  <div id="subdives">
+<div>
+    <input type="checkbox" id="scales" name="scales">
+    <label for="scales" style="font-family: sans-serif">Buy Now</label>
+
+  </div>
+  <div>
+    <input type="checkbox" id="scales" name="scale">
+    <label for="scale" style="font-family: sans-serif">Wait & save</label>
+
+</div>
+  <select name="sort" id="sortbyprice" onchange="sortbyprice()">
+    <option value="" style="font-family: sans-serif">Sort By Price</option>
+    <option value="low">Low To High</option>
+    <option value="high">High To Low</option>
+    
+  </select>
+
+</div>
+  <div id="maindivvv">
+    <div id="subcategory">
+          <h2>Subcategory</h2>
+          <p><a href="makeup.html">Makeup Accessories</a></p>
+          <p><a href="fashion.html">Fashion</a></p>
+          <p><a href="watch.html">Watches</a></p>                    
+    </div>
+   
+    <div id="AccesoriesContainer">
+     
+      
+    </div>
+    <div>
+      
+    </div>
+
+  </div>
+</body>
+</html>
+<script src="accessories.js"></script>
