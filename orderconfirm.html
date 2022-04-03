@@ -172,18 +172,18 @@
 
       <div id="navright">
         <div id="navlinks">
-          <p><a href=""> Sellers Corner </a></p>
+          <p><a href="sellercorner.html"> Sellers Corner </a></p>
           <p>|</p>
-          <p><a href=""> Feedback </a></p>
+          <p><a href="feedback.html"> Feedback </a></p>
           <p>|</p>
-          <p><a href=""> Delivery Info </a></p>
+          <p><a href="delivery.html"> Delivery Info </a></p>
         </div>
 
         <div id="navlogin">
           <div style="display: flex">
-            <p><a href=""> LOGIN </a></p>
+            <p><a href="login.html"> LOGIN </a></p>
             <p>/</p>
-            <p><a href=""> SIGNUP </a></p>
+            <p><a href="signup.html"> SIGNUP </a></p>
           </div>
           <div style="font-weight: bolder; font-size: 13px">WELCOME GUEST</div>
         </div>
@@ -373,18 +373,16 @@
     </div>
   </body>
   <script>
-    var addressObj = JSON.parse(localStorage.getItem("address")) || {};
-    console.log(addressObj);
-    document.querySelector("#address1").innerHTML = addressObj.address1;
-    document.querySelector("#address2").innerHTML = addressObj.address2;
-
-    document.querySelector("#city").innerHTML = addressObj.city;
-    document.querySelector("#city").innerHTML = addressObj.city;
-    document.querySelector("#state").innerHTML = addressObj.state;
-    document.querySelector("#number").innerHTML = addressObj.number;
-    document.querySelector("#state").innerHTML = addressObj.state;
-    document.querySelector("#pincode").innerHTML = addressObj.pincode;
-    document.querySelector
+   var addressObj = JSON.parse(localStorage.getItem("address")) || {};
+console.log(addressObj);
+document.querySelector("#address1").innerHTML = addressObj.address1;
+document.querySelector("#address2").innerHTML = addressObj.address2;
+document.querySelector("#city").innerHTML = addressObj.city;
+document.querySelector("#city").innerHTML = addressObj.city;
+document.querySelector("#state").innerHTML = addressObj.state;
+document.querySelector("#number").innerHTML = addressObj.number;
+document.querySelector("#state").innerHTML = addressObj.state;
+document.querySelector("#pincode").innerHTML = addressObj.pincode;
 
 
 

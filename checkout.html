@@ -135,18 +135,18 @@
 
       <div id="navright">
         <div id="navlinks">
-          <p><a href=""> Sellers Corner </a></p>
+          <p><a href="sellercorner.html"> Sellers Corner </a></p>
           <p>|</p>
-          <p><a href=""> Feedback </a></p>
+          <p><a href="feedback.html"> Feedback </a></p>
           <p>|</p>
-          <p><a href=""> Delivery Info </a></p>
+          <p><a href="delivery.html"> Delivery Info </a></p>
         </div>
 
         <div id="navlogin">
           <div style="display: flex">
-            <p><a href=""> LOGIN </a></p>
+            <p><a href="login.html"> LOGIN </a></p>
             <p>/</p>
-            <p><a href=""> SIGNUP </a></p>
+            <p><a href="signup.html"> SIGNUP </a></p>
           </div>
           <div style="font-weight: bolder; font-size: 13px">WELCOME GUEST</div>
         </div>
@@ -407,35 +407,35 @@
     </div>
   </body>
   <script>
-    var itemaddedtocard=JSON.parse(localStorage.getItem("card")) || [];
-    var total=itemaddedtocard.reduce(function(sum,elem,index,arr){
-   return sum+Number(elem.price) 
+var itemaddedtocard=JSON.parse(localStorage.getItem("card")) || [];
+var total=itemaddedtocard.reduce(function(sum,elem,index,arr){
+return sum+Number(elem.price) 
 },0);
 console.log(itemaddedtocard);
 console.log(total);
 document.querySelector(".total").innerHTML = total;
 
-    document.querySelector("#form").addEventListener("submit", myFunction);
+document.querySelector("#form").addEventListener("submit", myFunction);
 
-    function myFunction() {
-      alert("Placed Order");
+function myFunction() {
+  alert("Placed Order");
 
-      event.preventDefault();
-      var addressObj = JSON.parse(localStorage.getItem("address")) || {};
-      var addressObj = {
-        name: document.querySelector("#name").value,
-        email: document.querySelector("#email").value,
-        phone: document.querySelector("#phone").value,
-        address1: document.querySelector("#address1").value,
-        address2: document.querySelector("#address2").value,
-        state: document.querySelector("#state").value,
-        city: document.querySelector("#city").value,
-        country: document.querySelector("#country").value,
-        pincode: document.querySelector("#pincode").value,
-        payment: document.querySelector("#payment").value,
-      };
-      localStorage.setItem("address", JSON.stringify(addressObj));
-      location.href="orderconfirm.html";
-    }
+  event.preventDefault();
+  var addressObj = JSON.parse(localStorage.getItem("address")) || {};
+  var addressObj = {
+    name: document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    phone: document.querySelector("#phone").value,
+    address1: document.querySelector("#address1").value,
+    address2: document.querySelector("#address2").value,
+    state: document.querySelector("#state").value,
+    city: document.querySelector("#city").value,
+    country: document.querySelector("#country").value,
+    pincode: document.querySelector("#pincode").value,
+    payment: document.querySelector("#payment").value,
+  };
+  localStorage.setItem("address", JSON.stringify(addressObj));
+  location.href="orderconfirm.html";
+}
   </script>
 </html>
