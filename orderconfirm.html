@@ -103,61 +103,61 @@
       #feedbackbottom {
         display: flex;
       }
-      #submitreview{
-          background-color:rgb(247, 148, 29) ;
-          color: white;
-          padding: 5px;
-          text-align: center;
-          border: 0px;
-          width: 100%;
+      #submitreview {
+        background-color: rgb(247, 148, 29);
+        color: white;
+        padding: 5px;
+        text-align: center;
+        border: 0px;
+        width: 100%;
       }
-      label{
-          font-weight: bold;
-          font-size: 12px;
+      label {
+        font-weight: bold;
+        font-size: 12px;
       }
       #reviewtext {
-          width: 100%;
+        width: 100%;
       }
       radio {
-  display: inline-block;
-  position: relative;
-  padding: 0 6px;
-  margin: 10px 0 0;
-}
+        display: inline-block;
+        position: relative;
+        padding: 0 6px;
+        margin: 10px 0 0;
+      }
 
-radio input[type='radio'] {
-  display: none;
-}
+      radio input[type="radio"] {
+        display: none;
+      }
 
-radio label {
-  color: #666;
-  font-weight: normal;
-}
+      radio label {
+        color: #666;
+        font-weight: normal;
+      }
 
-radio label:before {
-  content: " ";
-  display: inline-block;
-  position: relative;
-  top: 5px;
-  margin: 0 5px 0 0;
-  width: 20px;
-  height: 20px;
+      radio label:before {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin: 0 5px 0 0;
+        width: 20px;
+        height: 20px;
 
-  border: 2px solid rgb(247, 148, 29);
-  background-color: transparent;
-}
+        border: 2px solid rgb(247, 148, 29);
+        background-color: transparent;
+      }
 
-radio input[type=radio]:checked + label:after {
-  border-radius: 11px;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 9px;
-  left: 10px;
-  content: " ";
-  display: block;
-  background: rgb(247, 148, 29);
-}
+      radio input[type="radio"]:checked + label:after {
+        border-radius: 11px;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 9px;
+        left: 10px;
+        content: " ";
+        display: block;
+        background: rgb(247, 148, 29);
+      }
     </style>
   </head>
   <body>
@@ -167,7 +167,6 @@ radio input[type=radio]:checked + label:after {
         <img
           src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/baselogo.png"
           alt=""
-          class="mb"
         />
       </div>
 
@@ -216,11 +215,11 @@ radio input[type=radio]:checked + label:after {
               </tr>
               <tr>
                 <td>001</td>
-                <td>1</td>
-                <td>Product Details</td>
-                <td>13 April, 2022</td>
-                <td>Rs 19999</td>
-                <td>Rs 19999</td>
+                <td>no of items</td>
+                <td>items</td>
+                <td id="deliverydate">13 April, 2022</td>
+                <td id="subtotal">Rs 19999</td>
+                <td id="total">Rs 19999</td>
               </tr>
               <tr>
                 <td></td>
@@ -228,7 +227,7 @@ radio input[type=radio]:checked + label:after {
                 <td></td>
                 <td></td>
                 <td style="font-weight: bolder">Total due at Delivery</td>
-                <td class="orange">Rs 19999</td>
+                <td class="orange" id="totaldue">Rs 19999</td>
               </tr>
             </table>
           </div>
@@ -236,20 +235,23 @@ radio input[type=radio]:checked + label:after {
         <div id="rightbox">
           <div id="addressHeading">SHIPPING ADDRESS</div>
           <div id="addressDisplay">
-            <div>Address1</div>
-            <div>Address2</div>
-            <div>City</div>
-            <div>State, PINCODE</div>
+            <div id="address1">Address1</div>
+            <div id="address2">Address2</div>
+            <div id="city">City</div>
+            <div id="state">State,<span id="pincode">PINCODE</span></div>
             <br />
-            <div>9876543210</div>
-            <div class="orange">Continue Shipping</div>
+            <div id="number">9876543210</div>
+            <div class="orange">
+              <a href="home.html"> Continue Shipping</a>
+            </div>
           </div>
         </div>
       </div>
 
       <div id="feedback">
-        <h3 style="text-align: center" class="orange"
-        >Thanks for choosing MeanBuy.com</h3>
+        <h3 style="text-align: center" class="orange">
+          Thanks for choosing MeanBuy.com
+        </h3>
         <h4 style="text-align: center">
           Please provide us with some feedback. We'd like to know how we did.
         </h4>
@@ -356,21 +358,34 @@ radio input[type=radio]:checked + label:after {
             >
           </div>
 
-          <div style="margin-left: 20px;">
-     
+          <div style="margin-left: 20px">
             <p>
               <span class="orange">5. </span>Any further comments and or
               suggestions?
             </p>
             <textarea id="reviewtext" placeholder="Write here..."></textarea>
             <div>
-                <button id="submitreview" >SUBMIT</button>
-
+              <button id="submitreview">SUBMIT</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script>
+   var addressObj = JSON.parse(localStorage.getItem("address")) || {};
+console.log(addressObj);
+document.querySelector("#address1").innerHTML = addressObj.address1;
+document.querySelector("#address2").innerHTML = addressObj.address2;
+document.querySelector("#city").innerHTML = addressObj.city;
+document.querySelector("#city").innerHTML = addressObj.city;
+document.querySelector("#state").innerHTML = addressObj.state;
+document.querySelector("#number").innerHTML = addressObj.number;
+document.querySelector("#state").innerHTML = addressObj.state;
+document.querySelector("#pincode").innerHTML = addressObj.pincode;
+
+
+
+
+  </script>
 </html>
-<script src="orderconfirm.js"></script>
