@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <!-- <link rel="stylesheet" href="categorystyle.css"> -->
+</head>
+<style>
+ body{
+  background-color: white;
+}
+#bar-img{
+    height: 150px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+#mainContainer {
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  padding: 5px;
+}
+#subcategory > h2{
+  /* font-size: 16px; */
+  font-weight: bolder;
+  color: rgb(85, 87, 85);
+  text-decoration: none ;
+}
+#subcategory > p > a:hover{
+  color: rgb(28, 27, 27);
+  text-decoration: underline;
+}
+#subcategory > p > a{
+  font-size: 12px;
+  color: rgb(126, 129, 126);
+  text-decoration: none ;
+  margin-top: 15px;
+}
+#AccesoriesContainer {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 5%;
+  gap: 20px;
+}
+#singlediv {
+  width: 100%;
+  background-color: white;
+ 
+  
+}
+#brandRate {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif ;;
+  color: grey;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+}
+#price {
+  margin-bottom: -15px;
+  margin-top: 0px;
+  box-sizing: border-box;
+}
+#img {
+  width: 100%;
+  height: 65%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#subdiv {
+  padding: 10px;
+}
+#subcategory {
+  width: 20%;
+  /* height:1800px;
+  background-color: rgb(251, 248, 248);
+  text-align: left; */
+  font-family: sans-serif ;
+}
+#rate{
+  border: 1px solid green;
+  padding: 5px 5px 0px 10px;
+  text-align: center;
+  margin-top: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 6px;
+ position: absolute;
+ margin-left: 17%;
+ font-family: sans-serif ;
+ 
+ 
+}
+#ship {
+  color: green;
+  font-family: sans-serif ;
+  
+}
+h1 {
+  color: grey;
+}
+li {
+  font-size: 16px;
+  font-weight: bolder;
+  color: rgb(103, 110, 103);
+}
+#brand{
+  width: 200px;
+  margin-bottom: 10px;
+  /* border: 1px solid green; */
+}
+#sortbyprice{
+ 
+
+  padding: 10px;
+  font-weight: bolder;
+  border: 1px;
+  border-radius: 6px;
+  width: 10%;
+  margin-bottom: 6px;
+}
+#subdives{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media only screen and (min-width:0px) and (max-width:480px){
+  #AccesoriesContainer{
+      grid-template-columns: repeat(1,1fr);
+      width: 100%;
+      
+  }
+  #subcategory {
+    /* width: 20%;
+    /* height:1800px; */
+    /* background-color: white;
+    text-align: center; */ 
+    display: none;
+  }
+  #rate{
+    position: relative;
+  }
+}
+@media only screen and (min-width:481px) and (max-width:800px){
+  #AccesoriesContainer{
+      grid-template-columns: repeat(2,1fr);
+      width: 100%;
+      /* grid-template-rows: repeat(4,200px);   */
+  }
+  #subcategory {
+    /* width: 20%;
+    /* height:1800px; */
+    /* background-color: white;
+    text-align: center; */ 
+    display: none;
+  }
+  #rate{
+    position: relative;
+  }
+  #ship {
+    
+    font-size: 16px;
+}
+}
+</style>
+<body>
+  <div id="bar">
+    <img id="bar-img" src="https://lh3.googleusercontent.com/sClMkW4V-Ig2pGcu9trnq1IshoQSPvTEmK01vAe7CkZWxKTtcD7AJHkMy3EVEpmTwUD0FPJiSpLMIZ6RBUvlrOkkk1ushZwef-qEQ6LvKxJOgjj1UQqSUjedk2fP5fhw_xGlsb5Gwf7U2_2r1YDiWIUM28bKWcEQomRwq6-GLut6r8_cpLMvLs4JCz2EdgbFiSFJRKmoeJejClNN5QduGaqhgScEBeFoeqwTEbjMAloZaOZsOQoPo_pARip6Y9hj5ocBQFNCE_NAe-oDUtDa3CtTjw9kuZCS3ZrahVkhQt0PeUWlvUnFzk7c6FpEwgUAIUQg_stnLGFAqlc71aKHSPaUkakK4LuXz0rnKHRx1JuqYvavwh5hEbmkAJXqMQfBLhKHeA3R-gHw1K1xTokYGnVdH5dS5sO3Hc2quhtZ40bVOLjzkg5FKrTonuPilbHA-AwvksDQb5RyQrKBInvWFDutVr0xJLx6r2p6dpuJ2ETukzfWabd9pTtOUauIE7hWT_ejhdhZfV_77LAuAV4jQEy0HXGpVcxnAADpAi7lwpMd4tOrYTGSkhT7Rjtp2Nd6QMIGyssCfBBbSxrnubWp5qMUW8FPGqQveb7z_bYdB22Z3aG_hT7mZBYCP3W-bbxBK0yqbaoRdYohXlxpeZqqeI_m_ZjwJl9zh3A1Ts2e_2x-jZRr2IlDXgtw8yORnMu96qefCqHd4cvCbDHO771Uw3NHBWqPjLotlh66hzFBCINY1g8T6rLv9e39EYa24EAEtY3ID6MRyKUVb57INv5kWWwcoU5pVf0V=w1896-h171-no?authuser=0" alt="">
+</div>
+  <div id="subdives">
+    <div>
+        <input type="checkbox" id="scales" name="scales">
+        <label for="scales" style="font-family: sans-serif">Buy Now</label>
+    
+      </div>
+      <div>
+        <input type="checkbox" id="scales" name="scale">
+        <label for="scale" style="font-family: sans-serif">Wait & save</label>
+    
+    </div>
+      <select name="sort" id="sortbyprice" onchange="sortbyprice()">
+        <option value="" style="font-family: sans-serif">Sort By Price</option>
+        <option value="low">Low To High</option>
+        <option value="high">High To Low</option>
+        
+      </select>
+    
+    </div>
+    <div id="mainContainer">
+    <div id="subcategory">
+
+          <h2>Subcategory</h2>
+          <p><a href="gaming.html">Gaming Accessories</a></p>
+          <p><a href="keyboard.html">Keaboard & Mouse</a></p>
+          <p><a href="laptops.html">Laptops</a></p>
+          <p><a href="watch.html">Small Appliances</a></p>   
+
+    </div>
+    <div id="AccesoriesContainer">
+      
+    </div>
+    <div>
+      
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var Electronics =[
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzg1XC9XaGl0ZV9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName: "Lenovo Pad Plus 11 inch Tablet (6GB+128GB)",
+       rating: "4.5/5 *",
+       price: 27999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjIzODExXC9CbGFja19uXzFfTWVhbmJ1eTEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyOTUsImhlaWdodCI6Mjk1LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+       brandName: "Smart Display Water Bottle",
+       rating: "4.5/5 *",
+       price: 3499,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzI1XC9TaWx2ZXJfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyOTUsImhlaWdodCI6Mjk1LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+       brandName: "Dual-Use Laptop and Desktop Stand",
+       rating: "4.9/5 *",
+       price: 12999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzI3XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName: "Two-Seater PS4 Charging Base",
+       rating: "4.2/5 *",
+       price: 1099,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzI4XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName: "PS4 Slim Pro Charging Base",
+       rating: "5/5 *",
+       price: 2999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTk4XC9HcmF5X25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6Mjk1LCJoZWlnaHQiOjI5NSwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19",
+       brandName: "HUAWEI MateBook X Pro i5 16GB 512G",
+       rating: "4.2/5 *",
+       price: 249999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+       " https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTM2XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName: "Xiaomi Mi Dual Mode Wireless Mouse",
+       rating: "3.9/5 *",
+       price: 1299,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+       " https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTM3XC9Sb3NlX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6Mjk1LCJoZWlnaHQiOjI5NSwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19",
+       brandName:"Xiaomi Mi Portable Mouse",
+       rating: "5/5 *",
+       price: 1999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+       " https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTQ4XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName:"Xiaomi Mi Computer Glass",
+       rating: "3.6/5 *",
+       price: 1999,
+       shipping: "Free Shipping",
+    },
+
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjIzODExXC9CbGFja19uXzFfTWVhbmJ1eTEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyOTUsImhlaWdodCI6Mjk1LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+       brandName: "Smart Display Water Bottle",
+       rating: "4.5/5 *",
+       price: 3499,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzg1XC9XaGl0ZV9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName: "Lenovo Pad Plus 11 inch Tablet (6GB+128GB)",
+       rating: "4.5/5 *",
+       price: 27999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzI1XC9TaWx2ZXJfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyOTUsImhlaWdodCI6Mjk1LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+       brandName: "Dual-Use Laptop and Desktop Stand",
+       rating: "4.9/5 *",
+       price: 12999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzI3XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName: "Two-Seater PS4 Charging Base",
+       rating: "4.2/5 *",
+       price: 1099,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjI0NDMxXC9XaGl0ZV9uXzFfV2lyZWxlc3NLZXlib2FyZDEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyOTUsImhlaWdodCI6Mjk1LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+       brandName: "Wireless Laser Keaboard",
+       rating: "5/5 *",
+       price: 4999,
+       shipping: "Free Shipping",
+    },
+    { image_url:
+        "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzI4XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5NSwiaGVpZ2h0IjoyOTUsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==",
+       brandName: "PS4 Slim Pro Charging Base",
+       rating: "5/5 *",
+       price: 2999,
+       shipping: "Free Shipping",
+    }
+
+
+
+
+       
+    ];
+
+    displaydata(Electronics)
+    function sortbyprice()
+{
+    var selected = document.querySelector("#sortbyprice").value;
+    if(selected=="low")
+    {
+        Electronics.sort(function(a,b)
+        {
+            return a.price - b.price
+        })
+    }
+    if(selected=="high")
+    {
+      Electronics.sort(function(a,b)
+        {
+            return b.price - a.price
+        })
+    }
+    displaydata(Electronics)
+ 
+}
+
+function displaydata(Electronics){
+    document.querySelector("#AccesoriesContainer").innerHTML="";
+ Electronics.map(function(elem){
+
+var div = document.createElement("div")
+div.setAttribute("id","singlediv")
+
+
+var image = document.createElement("img")
+image.setAttribute("src",elem.image_url)
+image.setAttribute("id","img")
+
+var hr = document.createElement("hr")
+hr.setAttribute("id","hr")
+
+var subdiv = document.createElement("div");
+subdiv.setAttribute("id","subdiv")
+
+var div2 = document.createElement("div");
+div2.setAttribute("id","brandRate")
+
+var brandname = document.createElement("span")
+brandname.textContent=elem.brandName
+brandname.setAttribute("id","brand")
+
+
+
+var rating = document.createElement("div")
+rating.textContent=elem.rating;
+rating.setAttribute("id","rate")
+
+
+
+
+var price = document.createElement("h2")
+price.textContent=`₹`+elem.price;
+price.setAttribute("id","price")
+
+var shipping = document.createElement("p")
+shipping.textContent=elem.shipping
+shipping.setAttribute("id","ship")
+
+div2.append(brandname,rating)
+
+subdiv.append(div2,hr,price,shipping)
+
+div.append(image,subdiv)
+document.getElementById("AccesoriesContainer").append(div)
+
+
+
+});
+
+}
+
+</script>

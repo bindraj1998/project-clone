@@ -35,3 +35,14 @@ document.querySelector(".tc").addEventListener("click",gotocart);
 function gotocart(){
     window.location.href="carddetails.html";
 }
+var trick=JSON.parse(localStorage.getItem("productlist"));
+var sum=0;
+var nomb=0;
+for(var a=0; a<trick.length; a++)
+{
+    sum=sum+Number(trick[a].Price);
+    nomb++;
+}
+document.querySelector("#titem").textContent=nomb;
+document.querySelector("#tcost").textContent=sum;
+document.querySelector("#gtcost").textContent=sum;
