@@ -30,8 +30,7 @@
         color: white;
         width: 80%;
         border-radius: 0px;
-    
-  
+
         margin: auto;
       }
       #coupon {
@@ -40,10 +39,8 @@
         color: white;
         border-radius: 0px;
         width: 100px;
-
-      
       }
-      input{
+      input {
         height: 35px;
         border-radius: 5px;
       }
@@ -57,7 +54,6 @@
         font-family: sans-serif;
         color: rgb(69, 90, 100);
         padding: 20px;
-  
       }
       #navbar img {
         height: 50px;
@@ -69,69 +65,62 @@
         padding: 10px;
       }
       #navlogin {
-
         font-size: 12px;
       }
       a {
         cursor: pointer;
-  
-
-
       }
-      #navbar a{
+      #navbar a {
         color: rgb(69, 90, 100);
-      
- 
       }
       #navright {
         display: flex;
         text-align: center;
       }
       #cartfinal {
-        background-color: rgb(217,216,216);
+        background-color: rgb(217, 216, 216);
         padding: 3px 3px 3px 3px;
       }
       #cartfinal > :nth-child(2) {
         display: flex;
         justify-content: space-between;
       }
-      #grandtotal > div{
-display: flex;
-
+      #grandtotal > div {
+        display: flex;
       }
-      .orange{
-        color:rgb(247, 148, 29) ;
+      .orange {
+        color: rgb(247, 148, 29);
       }
-      #bottomName{
-text-align: center;
+      #bottomName {
+        text-align: center;
       }
-      #state{
+      #state {
         height: 40px;
         border-radius: 5px;
       }
-      .sectop{
-             display: flex;
-
-        }
-        #payment{
-            height: 40px; width: 280px;
-            margin-top: 30px;
-        }
-        #bottom{
-            justify-content: space-between;
-            background-color: #f2f2f2;
-        }
-        .sp{
-            line-height: 5px;
-            font-size: small;
-            color: #666666;
-        }
-        .orange{
-            color: #F7941D;
-        }
-        .pt{
-            cursor: pointer;
-        }
+      .sectop {
+        display: flex;
+      }
+      #payment {
+        height: 40px;
+        width: 280px;
+        margin-top: 30px;
+      }
+      #bottom {
+        justify-content: space-between;
+        background-color: #f2f2f2;
+      }
+      .sp {
+        line-height: 5px;
+        font-size: small;
+        color: #666666;
+      }
+      .orange {
+        color: #f7941d;
+      }
+      .pt {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -155,12 +144,11 @@ text-align: center;
 
         <div id="navlogin">
           <div style="display: flex">
-     
             <p><a href=""> LOGIN </a></p>
             <p>/</p>
             <p><a href=""> SIGNUP </a></p>
           </div>
-          <div style="font-weight: bolder; font-size: 13px;">WELCOME GUEST</div>
+          <div style="font-weight: bolder; font-size: 13px">WELCOME GUEST</div>
         </div>
       </div>
     </div>
@@ -170,14 +158,13 @@ text-align: center;
         <div>
           <h3>Your Email & Phone Number</h3>
           <br />
-          <div style="display: flex;">
-            <p>For full account access please </p>
+          <div style="display: flex">
+            <p>For full account access please</p>
             <p><a href=""> Login or Sign Up</a></p>
           </div>
-
         </div>
         <div>
-          <form action="">
+          <form id="form" action="">
             <div class="detail">
               <h4>Email Address</h4>
               <input id="email" type="email" placeholder="Email Address" />
@@ -212,13 +199,17 @@ text-align: center;
                 <h4>State</h4>
                 <select name="state" id="state" class="form-control">
                   <option value="Andhra Pradesh">Andhra Pradesh</option>
-                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                  <option value="Andaman and Nicobar Islands">
+                    Andaman and Nicobar Islands
+                  </option>
                   <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                   <option value="Assam">Assam</option>
                   <option value="Bihar">Bihar</option>
                   <option value="Chandigarh">Chandigarh</option>
                   <option value="Chhattisgarh">Chhattisgarh</option>
-                  <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                  <option value="Dadar and Nagar Haveli">
+                    Dadar and Nagar Haveli
+                  </option>
                   <option value="Daman and Diu">Daman and Diu</option>
                   <option value="Delhi">Delhi</option>
                   <option value="Lakshadweep">Lakshadweep</option>
@@ -247,7 +238,7 @@ text-align: center;
                   <option value="Uttar Pradesh">Uttar Pradesh</option>
                   <option value="Uttarakhand">Uttarakhand</option>
                   <option value="West Bengal">West Bengal</option>
-                  </select>
+                </select>
               </div>
               <div class="detail">
                 <h4>City</h4>
@@ -289,64 +280,61 @@ text-align: center;
               </select>
             </div>
             <br />
-            <div style="text-align: center;">
-              <input
-             
-                id="placeorder"
-                type="submit"
-                name="submit"
-                value="PLACE ORDER"
-              />
+            <div style="text-align: center">
+              <a href="orderconfirm.html">
+                <input
+                  id="placeorder"
+                  type="submit"
+                  name="submit"
+                  value="PLACE ORDER"
+                />
+              </a>
             </div>
           </form>
         </div>
       </div>
       <div id="boxright">
         <div id="cartfinal">
-          <div style="display: flex;">
+          <div style="display: flex">
             <p>1</p>
-            <p> X </p>
-            <p>Item Name </p>
+            <p>X</p>
+            <p>Item Name</p>
           </div>
           <div>
-            <div  style="display: flex;">
-              <p style="color:rgb(247, 148, 29) ;">Delivery Date : </p>
-              <p>01\01\2023</p>
+            <div style="display: flex">
+              <p style="color: rgb(247, 148, 29)">Delivery Date :</p>
+              <p id="deliverydate">13,April, 2022</p>
             </div>
             <div>
-              <p>Rs 19999/-</p>
+              <p class="total">Rs 19999/-</p>
             </div>
           </div>
-
-    
         </div>
         <div>
           <p>
-           <a href="">  Edit Cart </a></p>
+            <a href=""> Edit Cart </a>
+          </p>
         </div>
         <hr />
 
         <div id="grandtotal">
-
           <div>
-            <p>Sub Total</p><p style="color: rgb(85,202,48);">Rs 10000</p>
+            <p>Sub Total</p>
+            <p style="color: rgb(85, 202, 48)">total</p>
           </div>
           <div class="orange">
-            <p>Shipping :</p><p> Rs 0000</p>
+            <p>Shipping :</p>
+            <p>Rs 0000</p>
           </div>
           <div class="orange">
-
-            <p>COD fee</p><p> Rs 000</p>
+            <p>COD fee</p>
+            <p>Rs 000</p>
           </div>
-          <br>
+          <br />
           <div>
             <p>Total:</p>
-            <p >rs 19999/-</p>
+            <p class="total">0/-</p>
           </div>
-          
-    
-
- 
 
           <p>Get 500 off with coupon PREPAID</p>
           <p>Got Promotional Code ? Use below</p>
@@ -364,63 +352,90 @@ text-align: center;
             id="coupon"
           />
         </div>
-        <br>
-        <hr>
+        <br />
+        <hr />
 
-<div id="bottomName" >
-  
-    <img style="height: 125px;" src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png" alt="">
+        <div id="bottomName">
+          <img
+            style="height: 125px"
+            src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png"
+            alt=""
+          />
 
- 
-    <h3>Our Shop. Your Price.</h3>
-    <h4>Online Shopping Redefined.</h4>
+          <h3>Our Shop. Your Price.</h3>
+          <h4>Online Shopping Redefined.</h4>
 
- 
-    <hr width="10%"
-    size="10" color="F7941D"
-    noshade>
- 
-</div>
-
-
-
+          <hr width="10%" size="10" color="F7941D" noshade />
+        </div>
       </div>
-
-
     </div>
 
-
-     <!-- bottom section -->
-     <div id="bottom" class="sectop">
+    <!-- bottom section -->
+    <div id="bottom" class="sectop">
       <div>
-      <h4 class="orange">OUR POLICIES</h4>
-       <p class="sp pt">Covid 19 Precautions</p>
-       <p class="sp pt">Our Promise</p>
-       <p class="sp pt">Terms and Conditions</p>
-       <p class="sp pt">Privacy Policy</p>
+        <h4 class="orange">OUR POLICIES</h4>
+        <p class="sp pt">Covid 19 Precautions</p>
+        <p class="sp pt">Our Promise</p>
+        <p class="sp pt">Terms and Conditions</p>
+        <p class="sp pt">Privacy Policy</p>
       </div>
       <div>
-          <h4 class="orange">CORPORATE</h4>
-          <p class="sp pt">Sell with us</p>
-          <p class="sp pt">Career Opportunities</p>
-          <p class="sp pt">Sitemap</p>
+        <h4 class="orange">CORPORATE</h4>
+        <p class="sp pt">Sell with us</p>
+        <p class="sp pt">Career Opportunities</p>
+        <p class="sp pt">Sitemap</p>
       </div>
       <div>
-          <h4 class="orange">HELP</h4>
-          <p class="sp pt">How Meanbuy works</p>
-          <p class="sp pt">My Orders</p>
-          <p class="sp pt">Exchanges, Return & Refund</p>
-          <p class="sp pt">Contact us</p>
-          <p class="sp pt">FAQ</p>
+        <h4 class="orange">HELP</h4>
+        <p class="sp pt">How Meanbuy works</p>
+        <p class="sp pt">My Orders</p>
+        <p class="sp pt">Exchanges, Return & Refund</p>
+        <p class="sp pt">Contact us</p>
+        <p class="sp pt">FAQ</p>
       </div>
       <div>
-          <h4 class="orange">SELL WITH US</h4>
-          <p class="sp pt">General Informations</p>
-          <p class="sp pt">Sign up</p>
+        <h4 class="orange">SELL WITH US</h4>
+        <p class="sp pt">General Informations</p>
+        <p class="sp pt">Sign up</p>
       </div>
       <div id="payment">
-          <img src="file:///Users/subhammanavshree/Desktop/Screenshot%202022-04-01%20at%206.42.01%20PM.png" alt="">
+        <img
+          src="file:///Users/subhammanavshree/Desktop/Screenshot%202022-04-01%20at%206.42.01%20PM.png"
+          alt=""
+        />
       </div>
-  </div>
+    </div>
   </body>
+  <script>
+    var itemaddedtocard=JSON.parse(localStorage.getItem("card")) || [];
+    var total=itemaddedtocard.reduce(function(sum,elem,index,arr){
+   return sum+Number(elem.price) 
+},0);
+console.log(itemaddedtocard);
+console.log(total);
+document.querySelector(".total").innerHTML = total;
+
+    document.querySelector("#form").addEventListener("submit", myFunction);
+
+    function myFunction() {
+      alert("Placed Order");
+
+      event.preventDefault();
+      var addressObj = JSON.parse(localStorage.getItem("address")) || {};
+      var addressObj = {
+        name: document.querySelector("#name").value,
+        email: document.querySelector("#email").value,
+        phone: document.querySelector("#phone").value,
+        address1: document.querySelector("#address1").value,
+        address2: document.querySelector("#address2").value,
+        state: document.querySelector("#state").value,
+        city: document.querySelector("#city").value,
+        country: document.querySelector("#country").value,
+        pincode: document.querySelector("#pincode").value,
+        payment: document.querySelector("#payment").value,
+      };
+      localStorage.setItem("address", JSON.stringify(addressObj));
+      location.href="orderconfirm.html";
+    }
+  </script>
 </html>
