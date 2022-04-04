@@ -1,4 +1,4 @@
-# project-clone
+# Project-clone
 Project: Making clone of Meanby online shopping site Using html,js and css
 Project description : In this Project Meanbuy is a platform for you to shop varies product like home decortion,watches,fashion items,electronic items,mobile and tabs etc.This project is built by 6 members Safal Ali Khan ,Sachin Kumar,Mohit Kumar,Raj Kumar Bind,Rajinder Yadav and Rekha Yadav.
 
@@ -18,6 +18,6 @@ Raj Kumar Bind has made the new arrivals page using html. Project collabortaion 
 
 Languages used in this project :
 
-HTML: 57.3%
+HTML: 59.8%
 
-JS : 42.7%
+JS : 40.2%
